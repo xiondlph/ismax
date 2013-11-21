@@ -1,0 +1,146 @@
+#signup{
+  margin: -110px 0 0 0;
+  position: absolute;
+  text-align: center;
+  display: block;
+  height: 220px;
+  width: 350px;
+  top: 50%;
+  right: 0
+}
+
+#signup h1{
+  font-weight: normal;
+  font-size: 160%;
+  color: #355035;
+}
+
+#slide{
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+  box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+
+  background-color: #fff;
+  margin: -150px 0 0 0;
+  position: absolute;
+  display: block;
+  height: 300px;
+  width: 450px;
+  top: 50%;
+  left: 0;
+}
+
+.details{
+  margin: 0 0 0 -110px;
+  position: absolute;
+  line-height: 40px;
+  font-size: 95%;
+  cursor: pointer;
+  color: #009cdc;
+  display: block;
+  width: 220px;
+  height: 40px;
+  left: 50%;
+  bottom: 0;
+}
+
+.details:after {
+  position: relative;
+  content: "↓";
+  right: -7px;
+}
+
+.features{
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+}
+
+.features > div{
+  padding: 10px 0;
+}
+
+.features .info{
+  width: 400px;
+}
+
+.features h2{
+  font-weight: normal;
+  font-size: 200%;
+  color: #77997E;
+  margin: 0;
+}
+
+.features .photo{
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+  box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+  background-color: #fff;
+  height: 180px;
+  width: 300px;
+}
+
+.features .left .info{
+  float: right;
+}
+
+.features .right .info{
+  float: left;
+}
+
+.features .left .photo{
+  float: left;
+}
+
+.features .right .photo{
+  float: right;
+}
+
+@media screen and (max-width: 800px){
+  #signup{
+    width: 100%;
+  }
+
+  #slide{
+    height: 290px;
+    width: 100%;
+    margin: 0;
+    top: 100%
+  }
+
+  .features{
+    padding: 290px 0 0 0;
+  }
+
+  .features .info{
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .features .photo{
+    margin: 0 auto;
+  }
+
+  .features .left .info{
+    float: none;
+  }
+  
+  .features .right .info{
+    float: none;
+  }
+
+  .features .left .photo{
+    float: none;
+  }
+  
+  .features .right .photo{
+    float: none;
+  }
+}
+
+@media screen and (max-width: 320px){
+  #slide{
+    height: 230px;
+  }
+}
