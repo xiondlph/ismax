@@ -1,146 +1,275 @@
-#signup{
-  margin: -110px 0 0 0;
+
+#main > h1{
+  position: absolute;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  left: 10px;
+  top: 15%;
+}
+
+#main > p{
+  position: absolute;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  left: 10px;
+  top: 20%;
+}
+
+/*** Слайдер ***/
+#slider{
+  position: absolute;
+  display: block;
+  height: 350px;
+  width: 450px;
+  bottom: 30px;
+  left: 0;
+}
+
+#slider h2{
+  font-weight: normal;
+  position: absolute;
+  font-size: 16px;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+  left: 15px;
+  top: 0;
+}
+
+#slider img{
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  position: absolute;
+  overflow: hidden;
+  display: block;
+  left: 13px;
+  top: 5px;
+}
+
+#slider h3{
+  position: absolute;
+  font-size: 14px;
+  z-index: 100;
+  top: 290px;
+  left: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+#slider p{
+  position: absolute;
+  font-size: 12px;
+  z-index: 100;
+  top: 310px;
+  left: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+#slider ul{
   position: absolute;
   text-align: center;
+  list-style: none;
+  width: 450px;
   display: block;
-  height: 220px;
-  width: 350px;
-  top: 50%;
-  right: 0
+  top: 325px;
+  padding: 0;
+  margin: 0;
+  left: 0;
 }
 
-#signup h1{
-  font-weight: normal;
-  font-size: 160%;
-  color: #355035;
+
+#slider li{
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+
+  -webkit-box-shadow: inset 0px 0px 1px #222;
+  -moz-box-shadow: inset 0px 0px 1px #222;
+  box-shadow: inset 0px 0px 1px #222;
+
+  background-color: #ccc;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
 }
 
-#slide{
-  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
-  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
-  box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+#slider li.active{
+  background-color: green;
+}
 
-  background-color: #fff;
-  margin: -150px 0 0 0;
+#slider > div{
+  background-image: url(../images/slide.png);
+  background-position: center center;
+  background-repeat: no-repeat;
   position: absolute;
   display: block;
   height: 300px;
   width: 450px;
-  top: 50%;
-  left: 0;
+  left: 0px;
+  top: 5px;
 }
 
-.details{
-  margin: 0 0 0 -110px;
+/*** Скроллер ***/
+#scroll{
+  background-image: url(../images/scroll_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
   position: absolute;
-  line-height: 40px;
-  font-size: 95%;
-  cursor: pointer;
-  color: #009cdc;
+  padding: 16px 0;
+  width: 300px;
+  height: 318px;
+  bottom: 30px;
+  right: 0;
+}
+
+#scroll > div{
+  -webkit-transition: all 600ms;
+  transition:         all 600ms;
+  overflow: hidden;
+  padding: 0 30px;
+  width: 240px;
+  height: 318px;
+}
+
+#scroll p{
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  padding: 10px 0;
+  font-size: 12px;
   display: block;
-  width: 220px;
-  height: 40px;
+  height: 85px;
+  margin: 0;
+}
+
+#scroll i{
+  background-image: url(../images/arrow_prite.png);
+  background-position: -48px -15px;
+  background-repeat: no-repeat;
+  margin: 0 0 0 -12px;
+  position: absolute;
+  display: block;
+  height: 15px;
+  z-index: 100;
+  width: 24px;
   left: 50%;
   bottom: 0;
 }
 
-.details:after {
-  position: relative;
-  content: "↓";
-  right: -7px;
+#scroll i.active{
+  background-position: -24px -15px;
+  cursor: pointer;
 }
 
-.features{
+#scroll i.active:hover{
+  background-position: 0 -15px;
+  cursor: pointer;
+}
+
+#scroll i:first-child{
+  background-position: -48px 0;
+  top: 0;
+}
+
+#scroll i:first-child.active{
+  background-position: -24px 0;
+}
+
+#scroll i:first-child.active:hover{
+  background-position: 0 0;
+}
+
+#scroll > span{
+  background-image: url(../images/scroll.png);
+  background-position: center center;
+  background-repeat: no-repeat;
   position: absolute;
-  width: 100%;
-  top: 100%;
-  left: 0;
-}
-
-.features > div{
-  padding: 10px 0;
-}
-
-.features .info{
-  width: 400px;
-}
-
-.features h2{
-  font-weight: normal;
-  font-size: 200%;
-  color: #77997E;
-  margin: 0;
-}
-
-.features .photo{
-  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
-  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.3);
-  box-shadow: 1px 1px 3px rgba(0,0,0,.3);
-  background-color: #fff;
-  height: 180px;
+  display: block;
+  height: 350px;
   width: 300px;
+  left: 0;
+  top: 0;
 }
 
-.features .left .info{
-  float: right;
+/*** Кнопка регистрации ***/
+#signup{
+  position: absolute;
+  right: 10px;
+  top: 15%;
 }
 
-.features .right .info{
-  float: left;
+#signup > span{
+  background-image: url(../images/icon.png);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+  font-size: 25px;
 }
 
-.features .left .photo{
-  float: left;
+/*** Стилизация формы ***/
+form{
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+  box-shadow: 1px 1px 3px rgba(0,0,0,.1);
+
+  -webkit-border-radius: 2px 0px 2px 2px;
+  -moz-border-radius: 2px 0px 2px 2px;
+  border-radius: 2px 0px 2px 2px;
+
+  border: 1px solid #cdcece;
+  position: absolute;
+  background: #fff;
+  cursor: default;
+  padding: 10px;
+  display: none;
+  right: -1px;
 }
 
-.features .right .photo{
-  float: right;
+form input[type="text"],
+form input[type="password"]{
+  border: 1px solid #ddd;
+  width: 150px;
+  margin: 3px 0;
+  padding: 2px;
 }
 
-@media screen and (max-width: 800px){
-  #signup{
-    width: 100%;
-  }
-
-  #slide{
-    height: 290px;
-    width: 100%;
-    margin: 0;
-    top: 100%
-  }
-
-  .features{
-    padding: 290px 0 0 0;
-  }
-
-  .features .info{
-    margin: 0 auto;
-    width: 95%;
-  }
-
-  .features .photo{
-    margin: 0 auto;
-  }
-
-  .features .left .info{
-    float: none;
-  }
-  
-  .features .right .info{
-    float: none;
-  }
-
-  .features .left .photo{
-    float: none;
-  }
-  
-  .features .right .photo{
-    float: none;
-  }
+form input[type="text"].invalid.checked,
+form input[type="password"].invalid.checked{
+  border: 1px solid #cd0a0a;
+  background: #fef1ec;
+  color: #cd0a0a;
 }
 
-@media screen and (max-width: 320px){
-  #slide{
-    height: 230px;
-  }
+form a{
+  font-size: 12px;
+}
+
+form .loader{
+  visibility: hidden;
+}
+
+/*** Форма авторизации ***/
+a#login form{
+  bottom: -120px;
+  height: 100px;
+  width: 180px;
+}
+
+a#login.active form{
+  display: block;
+}
+
+/*** Форма регистрации ***/
+a#signup form{
+  bottom: -80px;
+  height: 60px;
+  width: 380px;
+}
+
+a#signup.active form{
+  display: block;
 }

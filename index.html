@@ -4,75 +4,50 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords" content="коментарии, отзывы, виджет, модуль, для сайта, на сайт" />
-  <meta name="description" content="Сервис предоставляет возможность за несколько минут установить на сайт полнофункциональный блок для размещение отзывов." />
+  <meta name="description" content="ismax - бесплатный инструмент предоставлябщий возможность за несколько минут установить на сайт полнофункциональный модуль для размещение отзывов." />
+  <link href="/css/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
   <link href="/css/common.css" rel="stylesheet" type="text/css" />
   <link href="/css/index.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/js/lib/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="/js/lib/jquery-ui-1.10.3.custom.min.js"></script>
+  <script type="text/javascript" src="/js/lib/backbone/underscore.js"></script>
+  <script type="text/javascript" src="/js/lib/backbone/backbone.js"></script>
+  <script type="text/javascript" src="/js/common.js"></script>
+  <script type="text/javascript" src="/js/app/Index/App.js"></script>
+  <script type="text/javascript" src="/js/app/Index/Tpl/index.js"></script>
+  <script type="text/javascript" src="/js/app/Index/Presenter/index.js"></script>
 	<title>Отзывы на сайт</title>
 </head>
 
 <body>
   <div id="main">
-
-    <div id="signup">
-      <a href="/" id="logo"><img src="/images/logo.png" /></a>
-      <h1>Отзывы на Вашем сайте</h1>
-      <a href="#" class="btn">Зарегистрироваться</a>
+    <h1>Модуль отзывов для вашего сайта</h1>
+    <p><strong>ISMAX</strong> -  бесплатный инструмент предоставляющий<br />возможность за несколько минут установить на сайт<br />простой и легкий модуль для размещения отзывов<br />
+    о продуктах или услугах представленных<br />
+    на страницах вашего сайта.</p>
+    <div id="slider">
+      <h2>Обзор сервиса</h2>
+      <h3>Отзывы</h3>
+      <img src="/images/slide_1.png" />
+      <p>Возможность размещения посетителем отзыва о продукте или услуге</p>
+      <h3>Рейтинг</h3>
+      <p>Формирование рейтинга путем голосования за продукт или услугу</p>
+      <img src="/images/slide_2.png" />
+      <h3>Оценки</h3>
+      <img src="/images/slide_3.png" />
+      <p>Возможность оценки представленного на сайте продукта или услуги</p>
     </div>
-    <div id="slide">
-
+    <div id="scroll">
+      <p>Работа в режиме реального времени, без необходимости перезагрузки страницы.</p>
+      <p>Модуль отзывов адаптирован под мобильные устройста</p>
+      <p>Привлекательный внешний вид и интуитивно понятный интерфейс.</p>
+      <p>Гибкий инструмент настройки внешнего вида под дизайн конечного сайта.</p>
+      <p>Простота установки модуля отзывов путем копированияем всего одной строки кода на страницу сайта.</p>
+      <p>Надежная защита от спама, а так же инструменты модерации и контроля.</p>
     </div>
-    <span class="details">Дополнительные сведения</span>
-
-    <div class="features">
-      <div class="left features1">
-        <div class="info">
-          <h2>Из уст в уста</h2>
-          <p>Как показывает практика, лучшим маркетингом для компании является "сарафанное радио", то есть, отзывы самих клиентов этой компании, которые они передают из уст в уста. Маркетинг "из уст в уста" гарантирует наиболее непредвзятые и самые актуальные отзывы относительно тех или иных услуг предприятия.</p>      
-        </div>
-        <div class="photo"></div>
-      </div>
-  
-      <div class="right features2">
-        <div class="info">
-          <h2>Масштаб</h2>
-          <p>Необходимость регистрации является дополнительной преградой при оставлении отзыва, в результате чего общение часто приобретает анонимный или ограниченный характер.</p>      
-        </div>
-        <div class="photo"></div>
-      </div>    
-    </div>
-
-<!--
-    <div class="features left">
-      <div>
-        <h2>Скорость</h2>
-        <p>В отличие от других возможностей социализации, наш виджет отзывов очень прост в установке и может быть внедрен на все страницы Вашего сайта в течение 5 минут.</p>
-      </div>
-      <img src="/images/features.png" />
-    </div>
-    <div class="features right">
-      <div>
-        <h2>Контроль</h2>
-        <p>Администратор сайта, устанавливающий код виджета отзывов, имеет возможность модерировать дискуссию прямо со страниц своего ресурса, удаляя нежелательные комментарии.</p>
-      </div>
-      <img src="/images/features.png" />
-    </div>
--->
-    
-    <!--LiveInternet counter--><script type="text/javascript"><!--
-    document.write("<a href='http://www.liveinternet.ru/click' "+
-    "target=_blank><img src='//counter.yadro.ru/hit?t44.6;r"+
-    escape(document.referrer)+((typeof(screen)=="undefined")?"":
-    ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
-    screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
-    ";h"+escape(document.title.substring(0,80))+";"+Math.random()+
-    "' alt='' title='LiveInternet' "+
-    "border='0' width='31' height='31'><\/a>")
-    //--></script><!--/LiveInternet-->
   </div>
   <div id="panel">
-    <div class="top">
-      <a href="#" class="btn">Войти</a>
-    </div>
+    <div class="top"></div>
     <div class="bottom">
       <ul>
         <li><a href="#">демо</a></li>
