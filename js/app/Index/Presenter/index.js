@@ -32,7 +32,7 @@ App.Index.View.Index = {
     },
 
     mousewheel: function(e){
-      var delta = getDelta(event);
+      var delta = getDelta(e);
 
       if(delta > 0){
         if(this.$el.find('li.active').prev().is('li')){
@@ -90,7 +90,7 @@ App.Index.View.Index = {
     },
 
     mousewheel: function(e){
-      var delta = getDelta(event);
+      var delta = getDelta(e);
 
       if(delta > 0){
         this.$el.find('i:first').trigger('click');
@@ -111,10 +111,10 @@ App.Index.View.Index = {
       'click .send.enabled':            'send',
       'input input[name="email"]':      'changeEmail',
       'input input[name="password"]':   'changePassword',
-      'focus input[name="email"]':      'focusInput',
-      'focus input[name="password"]':   'focusInput',
-      'blur input[name="email"]':       'blurInput',
-      'blur input[name="password"]':    'blurInput',
+      'focusin input[name="email"]':      'focusInput',
+      'focusin input[name="password"]':   'focusInput',
+      'focusout input[name="email"]':       'blurInput',
+      'focusout input[name="password"]':    'blurInput',
     },
 
     render: function(){
@@ -159,8 +159,8 @@ App.Index.View.Index = {
         $(e.currentTarget).addClass('invalid');
         if($(e.currentTarget).hasClass('checked')){
           $(e.currentTarget).attr('info', 'Следует указать Email');
+          $(e.currentTarget).tooltip('close');
           $(e.currentTarget).tooltip({ content: "Следует указать Email" });
-          $(e.currentTarget).tooltip("option", "position", { my: "right center", at: "left center" });
         }
         $(e.currentTarget).tooltip('open');
 
@@ -172,9 +172,8 @@ App.Index.View.Index = {
         $(e.currentTarget).addClass('invalid');
         if($(e.currentTarget).hasClass('checked')){
           $(e.currentTarget).attr('info', 'Неверный формат Email');
+          $(e.currentTarget).tooltip('close');
           $(e.currentTarget).tooltip({ content: "Неверный формат Email" });
-          console.log($(e.currentTarget).tooltip( "option", "position" ));
-          $(e.currentTarget).tooltip("option", "position", { my: "right+20 center", at: "left center" });
         }
         $(e.currentTarget).tooltip('open');
 
@@ -199,6 +198,7 @@ App.Index.View.Index = {
         $(e.currentTarget).addClass('invalid');
         if($(e.currentTarget).hasClass('checked')){
           $(e.currentTarget).attr('info', 'Следует указать пароль');
+          $(e.currentTarget).tooltip('close');
           $(e.currentTarget).tooltip({ content: 'Следует указать пароль' });
         }
         $(e.currentTarget).tooltip('open');
@@ -211,6 +211,7 @@ App.Index.View.Index = {
         $(e.currentTarget).addClass('invalid');
         if($(e.currentTarget).hasClass('checked')){
           $(e.currentTarget).attr('info', 'Пароль может состоять из символов: a-z, 0-9');
+          $(e.currentTarget).tooltip('close');
           $(e.currentTarget).tooltip({ content: 'Пароль может состоять из символов: a-z, 0-9' });
         }
         $(e.currentTarget).tooltip('open');
@@ -246,6 +247,7 @@ App.Index.View.Index = {
         $(e.currentTarget).addClass('checked');
         $(e.currentTarget).focus();
       }
+      return false;
     },
 
     isValid: function(){
