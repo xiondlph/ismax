@@ -12,9 +12,10 @@ App.Index.Templates.Index = {
 
   Signup: [
     '<form action="#">',
-    '  <input type="text" name="email" placeholder="Email" />',
+    '  <input type="text" name="email" placeholder="Email" info="Укажите Email" class="invalid"/>',
     '  <a href="#" class="btn send"><span>Получить код</span></a>',
     '  <img src="/images/ajax-loader.gif" class="loader" />',
+    '  <p>На указанный вами Email будет отправлено сообщение с кодом модуля.</p>',
     '</form>',
     '<span>Получить код</span>'
   ].join("\n"),

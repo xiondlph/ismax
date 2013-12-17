@@ -267,9 +267,15 @@ a#login.active form{
 a#signup form{
   bottom: -80px;
   height: 60px;
-  width: 380px;
+  width: 310px;
 }
 
 a#signup.active form{
   display: block;
+}
+
+a#signup form p{
+  font-size: 12px;
+  color: #aaa;
+  margin: 5px 0 0 0;
 }
