@@ -264,15 +264,19 @@ App.Index.View.Index = {
       me.$el.find('input').attr('disabled', 'disabled');
       me.$el.find('.send').removeClass('enabled')
       $.ajax({
-        url: '/signin',
+        url: 'http://e-ismax.ru/user/signin',
         type: 'POST',
         dataType: 'json',
         data: JSON.stringify({
           email: me.$el.find('input[name="email"]').val(),
           password: me.$el.find('input[name="password"]').val()
         }),
-        success: function(){
-          alert('test');
+        success: function(data){
+          if(data.auth && data.auth === true){
+            window.location.href = 'http://e-ismax.ru/profile';
+          }else{
+            _error('Ошибка', 'Неверные Email или пароль!');
+          }
         },
         complete: function(){
           me.$el.find('.loader').css({visibility: 'hidden'});
@@ -409,16 +413,20 @@ App.Index.View.Index = {
       me.$el.find('input').attr('disabled', 'disabled');
       me.$el.find('.send').addClass('disabled');
       $.ajax({
-        url: '/signin',
+        url: 'http://e-ismax.ru/user/create',
         type: 'POST',
         dataType: 'json',
         data: JSON.stringify({
           email: me.$el.find('input[name="email"]').val()
         }),
-        success: function(){
-          alert('test');
+        success: function(data){
+          if(data.exist && data.exist === true){
+            _error('Ошибка', 'Пользователь с таким Email уже существует в системе!');
+          }else{
+            alert('test');
+          }
         },
-        complete: function(){
+        complete: function(data){
           me.$el.find('.loader').css({visibility: 'hidden'});
           me.$el.find('input').removeAttr('disabled');
           me.$el.find('.send').removeClass('disabled');

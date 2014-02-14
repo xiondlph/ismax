@@ -1,3 +1,15 @@
+function _error(title, message){
+	$('<div title="'+title+'"><p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>'+message+'</p></div>').dialog({
+    modal: true,
+    autoOpen: true,
+    buttons: {
+      Ok: function() {
+        $(this).dialog( "destroy" );
+      }
+    }
+  });
+}
+
 function getDelta (_event) {
 	var delta = 0;
 	var event = _event.originalEvent;
@@ -21,20 +33,6 @@ function getDelta (_event) {
 
 var App = {}
 
-var errorDlg = $('<div title="Ошибка"><p>Сервис временно недоступен, пожалуйста попробуйте позже!</p></div>');
-
 $(document).ajaxError(function(data){
-  errorDlg.dialog( "open" );
-});
-
-$(document).ready(function(){
-  errorDlg.dialog({
-    modal: true,
-    autoOpen: false,
-    buttons: {
-      Ok: function() {
-        $( this ).dialog( "close" );
-      }
-    }
-  });
+	_error('Ошибка', 'Сервис временно недоступен, пожалуйста попробуйте позже!');
 });
